@@ -22,7 +22,7 @@ int main()
     v[0] = 0; // 0 is not prime number
     v[1] = 0; // 1 is not prime number
 
-    for (int i = 2; i <= n / 2; i++) // sieve of eratosthenes
+    for (int i = 2; i <= sqrt(n); i++) // sieve of eratosthenes
     {
         if (v[i] == 1) // means v[i] is prime number and we are checking multiples if i
         {
