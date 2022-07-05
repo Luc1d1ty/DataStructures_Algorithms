@@ -2,7 +2,6 @@
 problem : TRIALDIV - Trial Division :: https://www.spoj.com/problems/TRIALDIV/
 Time : 0.01
 By : Luc1d (MhR)
-
  */
 
 
