@@ -4,6 +4,7 @@ problem : A. Noldbach problem
  */
 
 
+
 #include <bits/stdc++.h>
 
 #define endl "\n"
