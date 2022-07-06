@@ -7,6 +7,7 @@ link : https://www.spoj.com/files/src/29769490/
  */
 
 
+
 #include <bits/stdc++.h>
 
 #define endl "\n"
