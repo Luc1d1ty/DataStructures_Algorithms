@@ -21,18 +21,16 @@ If there are any remaining warriors, we can check if we can add them to a new, p
 #define endl "\n"
 #define test int t; cin>>t; while(t--)
 #define fastio ios_base::sync_with_stdio(false);cin.tie();cout.tie();
-
+#define ll long long int
 using namespace std;
 
 void solve()
 {
     test
     {
-        int num ;
-        
+        ll num ;
         cin >> num ;
-    
-        cout << floor(-1+sqrt(1+8*num))/2  << endl;
+        cout << (ll) floor(-1+sqrt(1+8*num))/2  << endl;
     }
 }
 
