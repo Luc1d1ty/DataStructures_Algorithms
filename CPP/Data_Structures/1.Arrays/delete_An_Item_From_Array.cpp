@@ -15,27 +15,27 @@ int main()
     int sizeOfArray;
     cout << "Enter the number of element you want to store :  " << endl;
     cin >> sizeOfArray;
-    cout << "Enter the value you want to delete : " << endl;
-    int toDelete, ind = -1;
-    cin >> toDelete;
 
     int arr[sizeOfArray];
     cout << "Enter values  :  ";
     for (int i = 0; i < sizeOfArray; i++)
     {
         cin >> arr[i];
+    }
+
+    cout << "Enter the value you want to delete : " << endl;
+    int toDelete, ind = -1;
+    cin >> toDelete;
+
+    cout << endl
+         << " elements in the array are : " << endl;
+    for (int i = 0; i < sizeOfArray; i++)
+    {
+        cout << arr[i] << " ";
         if (arr[i] == toDelete)
         {
             ind = i;
         }
-    }
-
-    cout << endl
-         << " elements in the array are : (using pointer )" << endl;
-    for (int *i = arr; i != arr + sizeOfArray; i++)
-    {
-        cout << *i << " ";
-        // delete arr;
     }
 
     if (ind == -1)
@@ -51,10 +51,10 @@ int main()
     }
 
     // delete (arr+5);
-    //cout << "Memory " << arr + 4 << endl;
-    //cout << "Memory " << arr + 5 << endl;
+    // cout << "Memory " << arr + 4 << endl;
+    // cout << "Memory " << arr + 5 << endl;
     // delete (arr+sizeOfArray);
-    
+
     cout << endl
          << " elements in the array are : after delete" << endl;
     for (int *i = arr; i != arr + sizeOfArray; i++)
@@ -65,7 +65,6 @@ int main()
         }
         cout << *i << " " << i << endl;
     }
-    cout << endl;
 
     return 0;
 }
