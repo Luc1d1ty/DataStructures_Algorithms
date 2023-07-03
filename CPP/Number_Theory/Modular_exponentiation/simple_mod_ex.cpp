@@ -1,3 +1,5 @@
+// x^y % m
+
 #include <bits/stdc++.h>
 
 #define fastio                        \
