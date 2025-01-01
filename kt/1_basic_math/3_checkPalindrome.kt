@@ -1,25 +1,17 @@
 fun main() {
-    val inp: String = readln()
+    val userInput: String = readln()
 
-    var upprVal = inp.length - 1
-    var res = true
+    var lastIndex = userInput.length - 1
+    var result = true
 
-    for (i in 0..inp.length / 2) {
-        if (inp[i] != inp[upprVal]){
-            res = false
+    for (i in 0..userInput.length / 2) {
+        if (userInput[i] != userInput[lastIndex]){
+            result = false
             break
         }
         else {
-            upprVal--
+            lastIndex--
         }
     }
-    println(res)
+    println(result)
 }
-
-
-//fun main() {
-//    for (i in 0 until 5) {
-//        val j = 5 - i
-//        println("i = $i, j = $j")
-//    }
-//}
