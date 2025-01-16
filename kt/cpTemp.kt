@@ -59,5 +59,7 @@ internal class FScan2 {
 //private fun readDouble() = readln().toDouble()
 //private fun readStrings() = readln().split(" ")
 //private fun readInts() = readStrings().map { it.toInt() }
+//private fun inArrOfLis(sz: Int) = Array(sz) {readln().split(' ')} // fixed sized Array of list as an example .
+//private fun readArrInt() = readInts().toTypedArray()
 //private fun readLongs() = readStrings().map { it.toLong() }
 //private fun readDoubles() = readStrings().map { it.toDouble() }
