@@ -15,3 +15,6 @@ fun main(){
     arr3.forEach { i -> println(i) }                 // an example of forEach
 
 }
+
+
+// println(arr contentEquals arr2) // compares array elements
