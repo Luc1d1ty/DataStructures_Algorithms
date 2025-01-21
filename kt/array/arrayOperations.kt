@@ -2,7 +2,7 @@
 
 fun main() {
     print("Enter Array Size : ")
-    var sz = readln().toInt()
+    var sz = readInt()
     print("Enter Array elements : ")
     var arr = Array(sz) { 0 }
 
@@ -23,7 +23,7 @@ fun main() {
             |Enter here : 
         """.trimMargin()
         )
-        var op = readln().toInt()
+        var op = readInt()
 
         when (op) {
             1 -> println("Elements are : ${printArr(*arr)}")
@@ -38,13 +38,13 @@ fun main() {
 
             3 -> {
                 println("Enter the value you want to find .")
-                var toFind = readln().toInt()
+                var toFind = readInt()
                 println(if (toFind in arr) "Found at index ${arr.indexOf(toFind)}" else "not found")
             }
             4 -> {
                 println("Not recommended . It will create a copied version of existing Array with newly added item .")
                 println("Demo : Enter value : ")
-                arr += readln().toInt()
+                arr += readInt()
                 print(" Your New Array : ${printArr(*arr)}")
             }
             else -> println("Bye")
@@ -54,7 +54,6 @@ fun main() {
     } while (op != 0)
 
 }
-
 
 
 fun <T> printArr(vararg arr: T) = arr.joinToString(" ")
