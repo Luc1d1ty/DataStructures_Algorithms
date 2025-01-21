@@ -1,20 +1,20 @@
 fun main(){
     print("FizzBuzz of 1 to ")
     var num: Int = readln().toInt()
+    var fizz = 3
+    var buzz = 5
 
     for (i in 1 .. num){
-        if ((i % 3 == 0 ) and (i % 5 == 0 )){
-            print("FizzBuzz")
+        var res = ""
+        if (i % fizz == 0){
+            res += "Fizz"
         }
-        else if (i % 3 == 0){
-            print("Fizz")
+        if (i % buzz == 0 ){
+            res += "Buzz"
         }
-        else if (i % 5 == 0 ){
-            print("Buzz")
+        if (res.isEmpty()){
+            res += i
         }
-        else{
-            print(i)
-        }
-        println()
+        println(res)
     }
 }

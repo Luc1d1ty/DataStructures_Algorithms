@@ -3,18 +3,26 @@
 fun main() {
     print("Enter Array Size : ")
     var sz = readln().toInt()
-    var arr = Array (sz) { 0 }
+    print("Enter Array elements : ")
+    var arr = Array(sz) { 0 }
+
+    // using method chaining to read from the terminal in a single line .
+    readln().split(' ').mapIndexed { index, value -> arr[index] = value.toInt() }
+
+    // alternatively , // var arr = readln().split(' ').map{it.toInt()}.toTypedArray() // can be used .
     println("Empty Array of size $sz initialized .")
     print("Elements are : ${printArr(*arr)}")
     do {
         println("\nOperations : ")
-        println(""" 1 -> Print Array .
+        println(
+            """ 1 -> Print Array .
             | 2 -> Update Item .
-            | 3 -> Delete Item .
-            | 4 -> Find Item .
+            | 3 -> Find Item .
+            | 4 -> Add Item (Not recommended !).
             | 0 -> Terminate Program .
             |Enter here : 
-        """.trimMargin())
+        """.trimMargin()
+        )
         var op = readln().toInt()
 
         when (op) {
@@ -23,10 +31,24 @@ fun main() {
                 print(" Enter index 0 <= your Input <= ${sz - 1} : ")
                 var pos = readInt()
                 print("Enter Value : ")
-                var valToStore = readInt()
-                arr[pos] = valToStore
+                var valToFind = readInt()
+                arr[pos] = valToFind
                 print(" Your New Array : ${printArr(*arr)}")
             }
+
+            3 -> {
+                println("Enter the value you want to find .")
+                var toFind = readln().toInt()
+                println(if (toFind in arr) "Found at index ${arr.indexOf(toFind)}" else "not found")
+            }
+            4 -> {
+                println("Not recommended . It will create a copied version of existing Array with newly added item .")
+                println("Demo : Enter value : ")
+                arr += readln().toInt()
+                print(" Your New Array : ${printArr(*arr)}")
+            }
+            else -> println("Bye")
+
         }
 
     } while (op != 0)
